@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class login extends BaseController
+class Shop extends BaseController
 {
     public function index(): string
     {
