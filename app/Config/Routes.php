@@ -15,7 +15,7 @@ $routes->get('/', 'index::index');
 
 $routes->get('/cart', 'Cart::index');
 
-$routes->get('/', 'checkout::index');
+$routes->get('/checkout', 'checkout::index');
 
 $routes->get('/', 'shop::index');
 
