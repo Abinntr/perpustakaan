@@ -13,7 +13,7 @@ $routes->get('/daftar', 'Daftar::index');
 
 $routes->get('/', 'index::index');
 
-$routes->get('/', 'cart::index');
+$routes->get('/cart', 'Cart::index');
 
 $routes->get('/', 'checkout::index');
 
