@@ -241,6 +241,7 @@ AND `password` = :password:', [...], false)
 11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\perpustakaan\\public\\index.php')
 INFO - 2024-05-26 08:41:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-26 08:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 CRITICAL - 2024-05-26 10:27:42 --> ErrorException: Undefined variable $judul
 [Method: GET, Route: daftar]
 in APPPATH\Views\daftar.php on line 111.
@@ -496,3 +497,6 @@ in APPPATH\Views\daftar.php on line 138.
  9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\perpustakaan\\public\\index.php')
+=======
+INFO - 2024-05-26 10:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 8f6dd0b3c98816bd46480fb6f9d0fa8470672f4b
