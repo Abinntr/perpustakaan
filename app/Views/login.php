@@ -114,9 +114,17 @@ form .text h3 a:hover{
       <div class="input-box">
         <input type="password" name="password" placeholder="Masukan password" required>
       </div>
+      <div class="col-sm-6 mb-3">
+    <label>Role</label><br>
+    <select name="role" class="form-control">
+      <option value="petugas">Petugas</option>
+      <option value="anggota">Anggota</option>
+    </select>
+    </div>
       <div class="input-box button">
         <button type="Submit" value="login">Login</button>
       </div>
+      
       <div class="text">
         <h3>belum punya akun? <a href="v_daftar_anggota">registrasi sekarang</a></h3>
       </div>
