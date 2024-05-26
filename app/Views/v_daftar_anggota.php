@@ -105,10 +105,13 @@ form .text h3 a:hover{
   text-decoration: underline;
 }
     </style>
-<div class="login-box">
+   <div class="wrapper">
+    <h2>Login</h2>
+    <?php echo form_open('login/cekLogin') ?>
+    <div class="login-box">
 <div class="card card-outline card-primary ">
     <div class="card-header text-center">
-      <a href="<?= base_url('register') ?>" class="h2"></a>
+      <a href="<?= base_url('Auth') ?>" class="h2"><?= $judul ?></a>
     </div>
     <div class="card-body">
     <?php 
@@ -134,87 +137,12 @@ form .text h3 a:hover{
       }
       ?>
      
-    
-    <?php echo form_open('register/daftar')?>
-    <div class="row">
-    <div class="col-sm-6">
-    
-        <div class="form-group mb-3">
-          <input type="text" name="nama" class="form-control" value="<?= old('nama') ?>" placeholder="Nama">
-        </div>
-    </div>
-    <div class="col-sm-6">
-    
-        <div class="form-group mb-3">
-        <input type="text" name="telp" class="form-control" value="<?= old('telp') ?>" placeholder="No telepon">
-        </div>
-    </div>
-    <div class="col-sm-6">
-    <label>Jenis Kelamin</label><br>
-    <select name="jk" class="form-control">
-      <option value="laki-laki" place>laki-laki</option>
-      <option value="perempuan">perempuan</option>
-    </select>
-    </div>
-    
-    <div class="col-sm-6">
-    
-        <div class="form-group mb-3">
-        <input type="text" name="alamat" class="form-control" value="<?= old('alamat') ?>" placeholder="Alamat">
-        </div>
-    </div>
-    <div class="col-sm-6 mb-3">
-    <label>Role</label><br>
-    <select name="role" class="form-control">
-      <option value="petugas">Petugas</option>
-      <option value="anggota">Anggota</option>
-    </select>
-    </div>
-    
-    <div class="col-sm-6">
-    
-        <div class="form-group mb-3">
-        <input type="text" name="email" class="form-control" value="<?= old('email') ?>" placeholder="Email">
-        </div>
-    </div>
-    <div class="col-sm-6">
-    
-        <div class="form-group mb-3 m">
-        <input type="text" name="username" class="form-control"value="<?= old('username') ?>" placeholder="username">
-        </div>
-    
-    </div>
-    <div class="col-sm-6">
-   
-        <div class="form-group mb-4">
-          <input type="password" class="form-control" name="password" value="<?= old('password') ?>" placeholder="password">
-        </div>
-    </div>
-    <div class="col-sm-12">
-    
-        <div class="form-group mb-3">
-          <input type="password" class="form-control" name="ulangi_password" value="<?= old('password') ?>"placeholder="ulangi password">
-        </div>
-     </div>
-    
-
-    </div>
-        <div class="row">
-          <div class="col-sm-6">
-            <a class="btn btn-success btn-block " href="<?= base_url('register') ?>">Kembali</a>
-          </div>
-          <!-- /.col -->
-          <div class="col-sm-6">
-            <button type="submit" class="btn btn-primary btn-block">Daftar</button>
-          </div>
-          
-          <!-- /.col -->
         </div>
       <?php echo form_close() ?>
 
       <div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
-        <a href="<?= base_url('register/loginuser') ?>" class="btn btn-block btn-warning">
+        <a href="<?= base_url('Auth/LoginAnggota') ?>" class="btn btn-block btn-warning">
           <i class="fa fa-sign-in-alt"></i> Kembali Login
         </a>
       </div>
@@ -225,6 +153,8 @@ form .text h3 a:hover{
     <!-- /.card-body -->
   </div>
   <!-- /.card -->
+    <?php echo form_close() ?>
+  </div>
 </div>
 </body>
 </html>

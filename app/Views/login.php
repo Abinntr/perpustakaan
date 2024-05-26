@@ -118,7 +118,7 @@ form .text h3 a:hover{
         <button type="Submit" value="login">Login</button>
       </div>
       <div class="text">
-        <h3>belum punya akun? <a href="/a">registrasi sekarang</a></h3>
+        <h3>belum punya akun? <a href="v_daftar_anggota">registrasi sekarang</a></h3>
       </div>
     <?php echo form_close() ?>
   </div>

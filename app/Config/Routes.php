@@ -20,6 +20,8 @@ $routes->get('/checkout', 'checkout::index');
 $routes->get('/shop', 'shop::index');
 
 $routes->get('/single', 'single::index');
+
+$routes->get('/admin', 'admin::index');
 $routes->setAutoroute(true);
 
 

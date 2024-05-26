@@ -4,11 +4,11 @@ namespace App\Controllers;
 
 use App\Models\ModelAuth;
 
-class Register extends BaseController
+class Auth extends BaseController
 {
     public function __construct(){
        helper('form');
-       $this-> registeruser = new registeruser;
+       $this->ModelAuth = new ModelAuth;
     }
     public function index(): string
     {
@@ -17,10 +17,10 @@ class Register extends BaseController
             'judul' => 'Login',
             'page' => 'v_login',
         ];
-        return view('v_template_login',$data);
+        return view('admin',$data);
     }
 
-    public function loginuser(){
+    public function LoginUser(){
         $data = [
             'judul' => 'Login User',
             'page' => 'v_login_user',
@@ -49,7 +49,7 @@ class Register extends BaseController
             //jika entry valid
             $email = $this->request->getPost('email');
             $password = $this->request->getPost('password');
-            $cek_login = $this->registeruser->LoginUser($email,$password);
+            $cek_login = $this->ModelAuth->LoginUser($email,$password);
             if ($cek_login) {
                 //jika login berhasil
                 session()->set('id',$cek_login['id']);
@@ -65,16 +65,20 @@ class Register extends BaseController
         }else {
             //jika entry tidak valid
             session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
-            return redirect()->to(base_url('register/login'));
+            return redirect()->to(base_url('Auth/LoginUser'));
         }
     }
 
-    public function login(){
+    public function LoginAnggota(){
         $data = [
             'judul' => 'Login Anggota',
             'page' => 'v_login_anggota',
         ];
+
         return view('daftar',$data);
+
+        return view('login',$data);
+
     }
 
     public function LogOut(){
@@ -82,14 +86,14 @@ class Register extends BaseController
         session()->remove('email');
         session()->remove('role');
         session()->setFlashdata('pesan','Logout Sukses !');
-         return redirect()->to(base_url('register/login'));
+         return redirect()->to(base_url('Auth/LoginUser'));
     }
     public function LogOutAnggota(){
         session()->remove('id');
         session()->remove('username');
         session()->remove('role');
         session()->setFlashdata('pesan','Logout Sukses !');
-         return redirect()->to(base_url('register/login'));
+         return redirect()->to(base_url('Auth/LoginAnggota'));
     }
     
     public function Register(){
@@ -97,7 +101,11 @@ class Register extends BaseController
             'judul' => 'Daftar Anggota',
             'page' => 'v_daftar_anggota',
         ];
+
         return view('daftar',$data);
+
+        return view('login',$data);
+
     }
     
     public function Daftar(){ 
@@ -191,11 +199,11 @@ class Register extends BaseController
             ];
             $this->ModelAuth->Daftar($data);
             session()->setFlashdata('pesan', 'Akun berhasil ditambahkan');
-            return redirect()->to(base_url('register/register'));
+            return redirect()->to(base_url('Auth/Register'));
 
         }else{
            session()->setFlashdata('errors', \Config\Services::validation()->getErrors() );
-            return redirect()->to(base_url('register/register'))->withInput('validation', \Config\Services::validation());
+            return redirect()->to(base_url('Auth/Register'))->withInput('validation', \Config\Services::validation());
         }
     }
    
@@ -229,12 +237,12 @@ class Register extends BaseController
             }else {
                 //jika login gagal
                 session()->setFlashdata('pesan','Username atau Password salah !');
-                return redirect()->to(base_url('register/login'));
+                return redirect()->to(base_url('Auth/LoginAnggota'));
             }
         }else {
             //jika entry tidak valid
             session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
-            return redirect()->to(base_url('register/login'));
+            return redirect()->to(base_url('Auth/LoginAnggota'));
         }
     }
     
