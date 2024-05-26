@@ -183,21 +183,13 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                <i class="right fas fa-angle-left"></i>
+                
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo site_url('dashboard') ?>" class="nav-link <?php if($activeMenu == 'dashboard') echo "active" ?>">
-               
-                </a>
-              </li>
+              
             </ul>
           </li>
-          
-          
-          
-          
           
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -215,20 +207,21 @@
                 </a>
               </li>
               <li class="nav-item <?php if(in_array($activeMenu,['jsgrid', 'flot'])){echo "menu-open";}?>">
-                <a href="/jsgrid" class="nav-link <?php if(in_array($activeMenu,['jsgrid', 'flot'])){echo "active";}?>">
+                <a href="komik" class="nav-link <?php if(in_array($activeMenu,['jsgrid', 'flot'])){echo "active";}?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>DataTables</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/jsgrid" class="nav-link">
+                <a href="/kategori" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>jsGrid</p>
+                  <p>kategori</p>
                 </a>
               </li>
+              
             </ul>
           </li>
-          <li class="nav-header">EXAMPLES</li>
+          <li class="nav-header">user</li>
           <li class="nav-item">
             <a href="<?php echo site_url('jsgrid') ?>  " class="nav-link <?php if($activeMenu == 'jsgrid') echo "active"; ?>">
              
