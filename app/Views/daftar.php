@@ -105,32 +105,129 @@ form .text h3 a:hover{
   text-decoration: underline;
 }
     </style>
-  <div class="wrapper">
-    <h2>Registration</h2>
-    <form action="#">
-      <div class="input-box">
-        <input type="text" placeholder="Masukan username" required>
+<div class="login-box">
+<div class="card card-outline card-primary ">
+    <div class="card-header text-center">
+      <a href="<?= base_url('register') ?>" class="h2"></a>
+    </div>
+    <div class="card-body">
+    <?php 
+      
+      $errors = session()->getFlashdata('errors');
+      if (!empty ($errors)) { ?>
+       <div class="alert alert-danger" role="alert">
+        <h4>Periksa Entry Form</h4>
+        <ul>
+          <?php foreach ($errors as $key => $error) { ?>
+            <li><?= esc($error) ?></li>
+          <?php } ?>
+        </ul>
+       </div>
+      <?php } ?>
+      <?php
+      if(session()->getFlashdata('pesan')){
+        echo' <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h5><i class="icon fas fa-check"></i>';
+        echo session()->getFlashdata('pesan');
+        echo '</h5></div>';
+      }
+      ?>
+     
+    
+    <?php echo form_open('register/daftar')?>
+    <div class="row">
+    <div class="col-sm-6">
+    
+        <div class="form-group mb-3">
+          <input type="text" name="nama" class="form-control" value="<?= old('nama') ?>" placeholder="Nama">
+        </div>
+    </div>
+    <div class="col-sm-6">
+    
+        <div class="form-group mb-3">
+        <input type="text" name="telp" class="form-control" value="<?= old('telp') ?>" placeholder="No telepon">
+        </div>
+    </div>
+    <div class="col-sm-6">
+    <label>Jenis Kelamin</label><br>
+    <select name="jk" class="form-control">
+      <option value="laki-laki" place>laki-laki</option>
+      <option value="perempuan">perempuan</option>
+    </select>
+    </div>
+    
+    <div class="col-sm-6">
+    
+        <div class="form-group mb-3">
+        <input type="text" name="alamat" class="form-control" value="<?= old('alamat') ?>" placeholder="Alamat">
+        </div>
+    </div>
+    <div class="col-sm-6 mb-3">
+    <label>Role</label><br>
+    <select name="role" class="form-control">
+      <option value="petugas">Petugas</option>
+      <option value="anggota">Anggota</option>
+    </select>
+    </div>
+    
+    <div class="col-sm-6">
+    
+        <div class="form-group mb-3">
+        <input type="text" name="email" class="form-control" value="<?= old('email') ?>" placeholder="Email">
+        </div>
+    </div>
+    <div class="col-sm-6">
+    
+        <div class="form-group mb-3 m">
+        <input type="text" name="username" class="form-control"value="<?= old('username') ?>" placeholder="username">
+        </div>
+    
+    </div>
+    <div class="col-sm-6">
+   
+        <div class="form-group mb-4">
+          <input type="password" class="form-control" name="password" value="<?= old('password') ?>" placeholder="password">
+        </div>
+    </div>
+    <div class="col-sm-12">
+    
+        <div class="form-group mb-3">
+          <input type="password" class="form-control" name="ulangi_password" value="<?= old('password') ?>"placeholder="ulangi password">
+        </div>
+     </div>
+    
+
+    </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <a class="btn btn-success btn-block " href="<?= base_url('register') ?>">Kembali</a>
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-6">
+            <button type="submit" class="btn btn-primary btn-block">Daftar</button>
+          </div>
+          
+          <!-- /.col -->
+        </div>
+      <?php echo form_close() ?>
+
+      <div class="social-auth-links text-center mb-3">
+        <p>- OR -</p>
+        <a href="<?= base_url('register/loginuser') ?>" class="btn btn-block btn-warning">
+          <i class="fa fa-sign-in-alt"></i> Kembali Login
+        </a>
       </div>
-      <div class="input-box">
-        <input type="text" placeholder="Masukan email" required>
-      </div>
-      <div class="input-box">
-        <input type="password" placeholder="Buat password" required>
-      </div>
-      <div class="input-box">
-        <input type="password" placeholder="Confirm password" required>
-      </div>
-      <div class="policy">
-        <input type="checkbox">
-        <h3>I accept all terms & condition</h3>
-      </div>
-      <div class="input-box button">
-        <input type="Submit" value="Register Now">
-      </div>
-      <div class="text">
-        <h3>Sudah punya akun? <a href="/r">Login sekarang</a></h3>
-      </div>
-    </form>
+      <!-- /.social-auth-links -->
+
+      
+    </div>
+    <!-- /.card-body -->
   </div>
+  <!-- /.card -->
+</div>
 </body>
 </html>
+
+
+

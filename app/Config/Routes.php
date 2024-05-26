@@ -18,9 +18,8 @@ $routes->get('/cart', 'Cart::index');
 $routes->get('/checkout', 'checkout::index');
 
 $routes->get('/shop', 'shop::index');
-$routes->get('/jsgrid', 'jsgrid::index');
 
-$routes->get('/single', 'single-product::index');
+$routes->get('/single', 'single::index');
 $routes->setAutoroute(true);
 
 

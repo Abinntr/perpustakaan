@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-class login extends BaseController
+class Single extends BaseController
 {
     public function index(): string
     {
-        return view('single-product');
+        return view('single');
     }
 }
