@@ -107,24 +107,20 @@ form .text h3 a:hover{
     </style>
   <div class="wrapper">
     <h2>Login</h2>
-    <form action="#">
+    <?php echo form_open('login/cekLogin') ?>
       <div class="input-box">
-        <input type="text" placeholder="Masukan Username" required>
+        <input type="text" name="email" placeholder="Masukan Email" required>
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Masukan password" required>
-      </div>
-      <div class="policy">
-        <input type="checkbox">
-        <h3>I accept all terms & condition</h3>
+        <input type="password" name="password" placeholder="Masukan password" required>
       </div>
       <div class="input-box button">
-        <input type="Submit" value="Register Now">
+        <button type="Submit" value="login">Login</button>
       </div>
       <div class="text">
         <h3>belum punya akun? <a href="/a">registrasi sekarang</a></h3>
       </div>
-    </form>
+    <?php echo form_close() ?>
   </div>
 </body>
 </html>
