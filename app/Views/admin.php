@@ -106,7 +106,7 @@ form .text h3 a:hover{
 }
     </style>
   <div class="wrapper">
-    <h2>Login</h2>
+    <h2>Login Admin</h2>
     <?php echo form_open('login/cekLogin') ?>
       <div class="input-box">
         <input type="text" name="email" placeholder="Masukan Email" required>
