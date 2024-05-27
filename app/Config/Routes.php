@@ -21,7 +21,9 @@ $routes->get('/shop', 'shop::index');
 
 $routes->get('/single', 'single::index');
 
-$routes->get('/admin', 'admin::index');
+$routes->get('/register', 'auth::index');
+
+$routes->get('/admin', 'admin::register');
 $routes->setAutoroute(true);
 
 

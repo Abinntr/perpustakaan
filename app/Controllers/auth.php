@@ -25,7 +25,7 @@ class Auth extends BaseController
             'judul' => 'Login User',
             'page' => 'v_login_user',
         ];
-        return view('daftar',$data);
+        return view('v_daftar_anggota',$data);
     }
 
     public function CekLoginUser(){

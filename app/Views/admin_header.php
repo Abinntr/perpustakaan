@@ -213,7 +213,8 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/kategori" class="nav-link">
+              <a href="<?php echo site_url('kategori') ?>  " class="nav-link <?php if($activeMenu == 'v_kategori') echo "active"; ?>">
+             
                   <i class="far fa-circle nav-icon"></i>
                   <p>kategori</p>
                 </a>
