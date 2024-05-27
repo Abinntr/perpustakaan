@@ -131,7 +131,7 @@ body{
       }
       ?>
 
-<?php echo form_open('register/Daftar')?>
+<?php echo form_open('register/login')?>
         <!--First name-->
     		<div class="box">
           <label type="text" name="nama" class="fl fontLabel" value="<?= old('nama') ?>" placeholder="Nama"> Nama: </label>
