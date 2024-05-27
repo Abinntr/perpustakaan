@@ -217,7 +217,7 @@ form .text h3 a:hover{
       <div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
         <a href="<?= base_url('Auth/LoginAnggota') ?>" class="btn btn-block btn-warning">
-          <i class="fa fa-sign-in-alt"></i> Kembali Login
+          <i class="fa fa-sign-in-alt"></i> Kembali Loginn
         </a>
       </div>
       <!-- /.social-auth-links -->

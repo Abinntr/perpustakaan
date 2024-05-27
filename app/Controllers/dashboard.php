@@ -6,8 +6,10 @@ class dashboard extends BaseController
 {
     public function index(): string
     {
-        $data['title'] = "dashboard";
-        $data['activeMenu'] = "dashboard";
+        $data = [
+            'title' => 'dashboard',
+            'activeMenu' => 'dashboard',
+        ];
 
         echo view("admin_header", $data);
         
