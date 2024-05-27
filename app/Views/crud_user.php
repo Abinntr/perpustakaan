@@ -51,7 +51,7 @@
                                             <th width="150">Jumlah</th>
                                             <th width="150">kategori_id</th>
                                             <th width="150">Lokasi</th>
-                                            <th width="300">Action</th>
+                                            <th width="300">Actionnn</th>
                                         </tr>
                                     </thead>
                                     <tbody>
