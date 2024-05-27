@@ -15,13 +15,13 @@ class Kategori extends BaseController
     public function index()
     {
         $data = [
-            'menu' => 'masterbuku',
+            'activeMenu' => 'masterbuku',
             'submenu' => 'kategori',
-            'judul' => 'Kategori',
+            'title' => 'Kategori',
             'page' => 'v_kategori',
             'kategori' => $this->ModelKategori->AllData(),
         ];
-        return view('v_template_admin',$data);
+        return view('admin_header',$data);
     }
     public function Add()
     {
