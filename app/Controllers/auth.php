@@ -17,7 +17,7 @@ class Auth extends BaseController
             'judul' => 'Login',
             'page' => 'v_login',
         ];
-        return view('admin',$data);
+        return view('login',$data);
     }
 
     public function LoginUser(){
@@ -56,7 +56,7 @@ class Auth extends BaseController
                 session()->set('nama',$cek_login['nama']);
                 session()->set('email',$cek_login['email']);
                 session()->set('role',$cek_login['role']);
-                return redirect()->to(base_url('Admin'));
+                return redirect()->to(base_url('Auth'));
             }else {
                 //jika login gagal
                 session()->setFlashdata('pesan','E-mail atau Password salah !');
@@ -86,14 +86,14 @@ class Auth extends BaseController
         session()->remove('email');
         session()->remove('role');
         session()->setFlashdata('pesan','Logout Sukses !');
-         return redirect()->to(base_url('Auth/LoginUser'));
+         return redirect()->to(base_url('auth/LoginUser'));
     }
     public function LogOutAnggota(){
         session()->remove('id');
         session()->remove('username');
         session()->remove('role');
         session()->setFlashdata('pesan','Logout Sukses !');
-         return redirect()->to(base_url('Auth/LoginAnggota'));
+         return redirect()->to(base_url('auth/LoginAnggota'));
     }
     
     public function Register(){
