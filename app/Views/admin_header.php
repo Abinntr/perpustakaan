@@ -197,9 +197,9 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-              <a href="<?php echo site_url('penulis') ?>  " class="nav-link <?php if($activeMenu == 'crud_penulis') echo "active"; ?>">
+              <a href="<?php echo site_url('penerbit') ?>  " class="nav-link <?php if($activeMenu == 'crud_penerbit') echo "active"; ?>">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Simple Tables</p>
+                  <p>Penerbit</p>
                 </a>
               </li>
               <li class="nav-item <?php if(in_array($activeMenu,['jsgrid', 'flot'])){echo "menu-open";}?>">
