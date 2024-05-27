@@ -49,10 +49,7 @@ class penerbit extends BaseController
     public function DeleteData($id)
     {
         $data = [
-            'id'=> $id,
-            'nama' => $this->request->getPost('nama'),
-            'alamat' => $this->request->getPost('alamat'),
-            'telp' => $this->request->getPost('telp'),
+            'id'=> $id
         ];
             $this->modelPenerbit->DeleteData($data);
             session()->setFlashdata('pesan','Data Berhasil Dihapus');

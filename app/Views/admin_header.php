@@ -196,6 +196,12 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?php echo site_url('buku') ?>  " class="nav-link <?php if($activeMenu == 'crud_buku') echo "active"; ?>">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>buku</p>
+                </a>
+              </li>
               <li class="nav-item">
               <a href="<?php echo site_url('penerbit') ?>  " class="nav-link <?php if($activeMenu == 'crud_penerbit') echo "active"; ?>">
                   <i class="far fa-circle nav-icon"></i>
