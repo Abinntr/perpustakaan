@@ -1,7 +1,9 @@
+<?= $this->extend('admin_header'); ?>
+<?= $this->section('content'); ?>
 <div class="col-md-12">
     <div class="card card-outline card-primary">
         <div class="card-header">
-            <h3 class="card-title">Data <?= $judul ?></h3>
+            <h3 class="card-title">Data <?= $title ?></h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-primary btn-flat btn-sm" data-toggle="modal" data-target="#modal-sm">
@@ -24,8 +26,8 @@
             <table class="table table-bordered">
                 <thead>
                     <tr class="text-center">
-                        <th width="50px">No</th>
-                        <th>Nama Kategori</th>
+                        <th width="10px">No</th>
+                        <th width="300px">Nama Kategori</th>
                         <th width="100px">Aksi</th>
                     </tr>
                 </thead>
@@ -48,14 +50,10 @@
                 </tbody>
             </table>
 
-
-
         </div>
         <!-- /.card-body -->
     </div>
 </div>
-
-
 
 
 <!-- modal tambah -->
@@ -63,7 +61,7 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Tambah <?= $judul ?></h4>
+                <h4 class="modal-title">Tambah <?= $title ?></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -93,7 +91,7 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Edit <?= $judul ?></h4>
+                <h4 class="modal-title">Edit <?= $title ?></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -126,7 +124,7 @@
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Hapus <?= $judul ?></h4>
+                    <h4 class="modal-title">Hapus <?= $title ?></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -150,3 +148,4 @@
     </div>
     
     <?php } ?>
+<?= $this->endSection(); ?>

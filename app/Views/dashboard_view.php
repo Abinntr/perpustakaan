@@ -1,4 +1,5 @@
-
+<?= $this->extend('admin_header'); ?>
+<?= $this->section('content'); ?>
     <!-- /.content-header -->
 
     <!-- Main content -->
@@ -835,4 +836,4 @@
         <!-- /.row -->
       </div><!--/. container-fluid -->
     </section>
-   
+    <?= $this->endSection(); ?>

@@ -21,7 +21,7 @@ class Kategori extends BaseController
             'page' => 'v_kategori',
             'kategori' => $this->ModelKategori->AllData(),
         ];
-        return view('admin_header',$data);
+        return view('v_kategori',$data);
     }
     public function Add()
     {

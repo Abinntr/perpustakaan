@@ -10,10 +10,6 @@ class dashboard extends BaseController
             'title' => 'dashboard',
             'activeMenu' => 'dashboard',
         ];
-
-        echo view("admin_header", $data);
-        
-        echo view("admin_footer");
         return view('dashboard_view',$data);
     }
 }
