@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-use App\Models\ModelAuth;
+use App\Models\ModelRegister;
 
-class Auth extends BaseController
+class Register extends BaseController
 {
     public function __construct(){
        helper('form');
-       $this->ModelAuth = new ModelAuth;
+       $this->ModelRegister = new ModelRegister;
     }
     public function index(): string
     {
@@ -17,15 +17,15 @@ class Auth extends BaseController
             'judul' => 'Login',
             'page' => 'v_login',
         ];
-        return view('v_daftar_anggota',$data);
+        return view('register',$data);
     }
 
     public function LoginUser(){
         $data = [
             'judul' => 'Login User',
-            'page' => 'v_login_user',
+            'page' => 'login',
         ];
-        return view('v_daftar_anggota',$data);
+        return view('register',$data);
     }
 
     public function CekLoginUser(){
@@ -60,19 +60,19 @@ class Auth extends BaseController
             }else {
                 //jika login gagal
                 session()->setFlashdata('pesan','E-mail atau Password salah !');
-                return redirect()->to(base_url('Auth/LoginUser'));
+                return redirect()->to(base_url('register/LoginUser'));
             }
         }else {
             //jika entry tidak valid
             session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
-            return redirect()->to(base_url('Auth/LoginUser'));
+            return redirect()->to(base_url('register/LoginUser'));
         }
     }
 
     public function LoginAnggota(){
         $data = [
             'judul' => 'Login Anggota',
-            'page' => 'v_login_anggota',
+            'page' => 'login',
         ];
 
         return view('daftar',$data);
@@ -99,7 +99,7 @@ class Auth extends BaseController
     public function Register(){
         $data = [
             'judul' => 'Daftar Anggota',
-            'page' => 'v_daftar_anggota',
+            'page' => 'register',
         ];
 
         return view('daftar',$data);
@@ -199,11 +199,11 @@ class Auth extends BaseController
             ];
             $this->ModelAuth->Daftar($data);
             session()->setFlashdata('pesan', 'Akun berhasil ditambahkan');
-            return redirect()->to(base_url('Auth/Register'));
+            return redirect()->to(base_url('register/Register'));
 
         }else{
            session()->setFlashdata('errors', \Config\Services::validation()->getErrors() );
-            return redirect()->to(base_url('Auth/Register'))->withInput('validation', \Config\Services::validation());
+            return redirect()->to(base_url('register/Register'))->withInput('validation', \Config\Services::validation());
         }
     }
    
@@ -233,16 +233,16 @@ class Auth extends BaseController
                 session()->set('id',$cek_login['id']);
                 session()->set('username',$cek_login['username']);
                 session()->set('role','Anggota');
-                return redirect()->to(base_url('DashboardAnggota'));
+                return redirect()->to(base_url('dashboard_view'));
             }else {
                 //jika login gagal
                 session()->setFlashdata('pesan','Username atau Password salah !');
-                return redirect()->to(base_url('Auth/LoginAnggota'));
+                return redirect()->to(base_url('register/login'));
             }
         }else {
             //jika entry tidak valid
             session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
-            return redirect()->to(base_url('Auth/LoginAnggota'));
+            return redirect()->to(base_url('register/login'));
         }
     }
     
