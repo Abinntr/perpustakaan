@@ -71,5 +71,6 @@ class login extends BaseController
        session()->remove('role');
        session()->setFlashdata('pesan', 'Logout sukses!');
        return redirect()->to(base_url('loginadmin'));
+        
     }
 }

@@ -916,3 +916,18 @@ in APPPATH\Views\crud_buku.php on line 109.
 12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\perpustakaan\\public\\index.php')
 INFO - 2024-05-27 21:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-27 22:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-27 22:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-27 22:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-27 22:17:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "daftar.php"
+[Method: GET, Route: Auth/Register]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('daftar.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('daftar', [], true)
+ 3 APPPATH\Controllers\auth.php(105): view('daftar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->Register()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\perpustakaan\\public\\index.php')
