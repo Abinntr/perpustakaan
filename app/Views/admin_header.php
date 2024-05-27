@@ -197,15 +197,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+              <a href="<?php echo site_url('penulis') ?>  " class="nav-link <?php if($activeMenu == 'crud_penulis') echo "active"; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Simple Tables</p>
                 </a>
               </li>
               <li class="nav-item <?php if(in_array($activeMenu,['jsgrid', 'flot'])){echo "menu-open";}?>">
-                <a href="komik" class="nav-link <?php if(in_array($activeMenu,['jsgrid', 'flot'])){echo "active";}?>">
+              <a href="<?php echo site_url('penulis') ?>  " class="nav-link <?php if($activeMenu == 'crud_penulis') echo "active"; ?>">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>DataTables</p>
+                  <p>Penulis</p>
                 </a>
               </li>
               <li class="nav-item">
